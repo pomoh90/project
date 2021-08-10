@@ -7,11 +7,19 @@ const options ={
     colors: {
         border: 'black',
         bg: 'red'
+    },
+    makeTest: function(){
+        console.log('test');
     }
 };
+//------------------
+options.makeTest();
 
+const {border, bg} = options.colors; //вытянул из оптионс встроенные объекты!!!!!!!
+console.log(border);
+//------------------
 console.log(Object.keys(options).length);  //top analog podscheta i vivod jptions
-
+//------------------
 let counter = 0;
 
 for (let key in options){
